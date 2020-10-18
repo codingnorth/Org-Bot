@@ -38,6 +38,6 @@ async def on_message(message):
       else:
         raise Exception()
     except:
-      await message.channel.send("Request timed out or aborted. Please type your username again and confirm.")
+      await message.channel.send("Request timed out or aborted. Please type your username again and confirm!")
 
 client.run(os.environ.get("BOT_TOKEN"))
