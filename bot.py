@@ -13,7 +13,7 @@ async def on_ready():
 async def on_message(message):
 
   def check(reaction, user):
-    return user == message.author and (str(reaction.emoji) == "✅" or srt(reaction.emoji) == "❎")
+    return user == message.author and (str(reaction.emoji) == "✅" or str(reaction.emoji) == "❎")
 
   if str(message.channel.id) != os.environ.get('CHECK_CHANNEL'):
     print(os.environ.get("CHECK_CHANNEL"))
