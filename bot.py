@@ -36,8 +36,8 @@ async def on_message(message):
         org.add_to_members(user)
         await message.channel.send("Invited " + message.content)
       else:
-        raise Exception()
+        await message.channel.send("Request aborted. Please type your username again and confirm!")  
     except:
-      await message.channel.send("Request timed out or aborted. Please type your username again and confirm!")
+      await message.channel.send("Request timed out. Please type your username again and confirm!")
 
 client.run(os.environ.get("BOT_TOKEN"))
